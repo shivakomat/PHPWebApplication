@@ -339,6 +339,35 @@ input:focus,select:focus {
 	cursor: pointer;
 	
 }
+#profilePicUpload{
+	width:300px;
+	height: auto;
+}
+#profilePicUpload input[type="file"]{
+	text-align: center;
+	width: 100%;
+	height: 30px;
+    color: #000;
+    font-size: 16px;    
+    border: 0;
+    cursor: pointer;
+    margin-left: 30%
+   
+
+}
+#profilePicUpload input[type="submit"]{
+	text-align: center;
+	width: 100px;
+	height: 30px;
+    background-color: #85ECEB;
+    color: #000;
+    font-size: 16px;
+    border: 0;
+    cursor: pointer;
+    margin-left: 50%;
+    
+
+}
 #footer
 {
 	width:960px;

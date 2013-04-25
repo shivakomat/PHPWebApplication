@@ -115,7 +115,7 @@ if(empty($_POST) === false)
     echo '<META HTTP-EQUIV="Refresh" Content="0; URL= teacher-member.php?savechanges=sucess">';
     exit();
   }
-  
+ 
 
 }// end of outter most if statment 
 ?>
@@ -136,45 +136,50 @@ if(empty($_POST) === false)
           	<h2 style="text-align:center; padding-right:75px; padding-top:30px;">EDIT PROFILE</h2>
             <div id="teachersLink">
               <?php 
-              if(isset($_FILES['profile'])===true)
-              {
-                if(empty($_FILES['profile']['name']) === true)
+               if(isset($_FILES['profile'])===true)
                 {
-                    echo "Please Choose a File";
-                }else
-                {
-                    $allowed = array('jpg','jpeg','gif','png');
-                    $file_name = $_FILES['profile']['name'];
-                    $file_extn = strtolower(end(explode('.', $file_name)));
-                    $file_temp = $_FILES['profile']['tmp_name'];
+                  if(empty($_FILES['profile']['name']) === true)
+                  {
+                      echo "Please Choose A File";
+                  }else
+                  {
+                      $allowed = array('jpg','jpeg','gif','png');
+                      $file_name = $_FILES['profile']['name'];
+                      $file_extn = strtolower(end(explode('.', $file_name)));
+                      $file_temp = $_FILES['profile']['tmp_name'];
 
-                    if(in_array($file_extn, $allowed) === true)
-                    {
-                     
-                      //change_profile_image($teacher_data['T_ID'],$file_temp,$file_extn);
-                      $file_path = 'images/profile/'.substr(md5(time()),0,10).'.'.$file_extn;
-                      move_uploaded_file($_FILES['profile']['tmp_name'], 'images/profile/'.$_FILES['profile']['name']) or die("Couldnt Upload the File");
-                      echo "$file_path";
+                      if(in_array($file_extn, $allowed) === true)
+                      {
+                       
+                        change_profile_image($teacher_data['T_ID'],$file_temp,$file_extn);
+                       
 
-                    }else {
-                      echo 'incorrect file type. Allowed: ';
-                      echo implode(',', $allowed);
+                      }else {
+                        echo 'incorrect file type. Allowed: ';
+                        echo implode(',', $allowed);
 
-                    }
+                      }
 
-                    
-                }
-              }              
+                      
+                  }
+                }             
               if(empty($teacher_data['profile'])===false)
               {
                  echo '<a href="teacher-member.php"><img src="',$teacher_data['profile'],'"></a>';
 
-              }              
+              }
+              else 
+              {
+                echo '<a href="teacher-member.php"><img src="images/teachers_icon_large_389x389.png"></a>';
+              }            
 
               ?>
-              <form action="" method="post" enctype="multipart/form-data">
-                <input type="file" name="profile"><input type="submit">
+              <div id="profilePicUpload">
+              <form  action="" method="post" enctype="multipart/form-data">
+                <input type="file" name="profile"><br>
+                <input type="submit" value="UPLOAD">
               </form>
+              </div>
             </div>
 
           </div> 
