@@ -152,6 +152,8 @@ if(empty($_POST) === false)
                       {
                        
                         change_profile_image($teacher_data['T_ID'],$file_temp,$file_extn);
+                        echo '<META HTTP-EQUIV="Refresh" Content="0; URL= teacher-edit-profile.php">';
+                        exit();
                        
 
                       }else {

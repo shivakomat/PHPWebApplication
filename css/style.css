@@ -85,6 +85,13 @@ a{
 }
 #teachersLink {
 	float: left;
+	width: 389px;
+	height: 389px;
+
+}
+#teachersLink img{
+	width: 100%;
+	height:100%;
 }
 #studentsLink {
 	float: right;
