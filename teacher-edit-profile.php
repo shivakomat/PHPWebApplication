@@ -151,7 +151,10 @@ if(empty($_POST) === false)
                     if(in_array($file_extn, $allowed) === true)
                     {
                      
-                      change_profile_image($teacher_data['T_ID'],$file_temp,$file_extn);
+                      //change_profile_image($teacher_data['T_ID'],$file_temp,$file_extn);
+                      $file_path = 'images/profile/'.substr(md5(time()),0,10).'.'.$file_extn;
+                      move_uploaded_file($_FILES['profile']['tmp_name'], 'images/profile/'.$_FILES['profile']['name']) or die("Couldnt Upload the File");
+                      echo "$file_path";
 
                     }else {
                       echo 'incorrect file type. Allowed: ';
