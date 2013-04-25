@@ -1,0 +1,379 @@
+html
+{
+	max-height: 100%;
+}
+@font-face {
+        font-family: "BebasNeue";
+        font-style: normal;
+        src: url(../fonts/BebasNeue.otf); /*if IE */
+        src: local("BebasNeue"), url("../fonts/BebasNeue.otf") format("truetype"); /* non-IE */
+}
+
+a{
+	text-decoration: none;
+	color:#85ECEB;
+}
+#header{
+	width:960px;
+	margin:auto;
+	height:19.78%;
+}
+#logoutButton{
+	float: right;
+	width: 75px;
+	height: 25px;
+	text-align: center;
+	color:#333;
+	background-color: #85ECEB;
+	font-weight: 600;
+	line-height: 1.5;
+}
+#logo
+{
+	float:left;
+}
+#title
+{
+	float:left;
+	line-height:2;
+	padding-top:5.55%;
+	padding-left: 50px;	
+}
+#membersNav{
+	float: right;
+	width: 300px;
+	height: auto;
+}
+#membersNav a{
+	color: #000;
+	font-weight: 600;
+}
+#content
+{
+	padding-top:0;
+	padding-bottom:2.2%;
+	height:71.11%;	
+	background-image:url(../images/bg_101x101.fw.png);
+	background-repeat:repeat;
+	margin-bottom:0px;	
+	box-shadow:inset 0px 7px 20px rgba(0,0,0,.5); 
+	-moz-box-shadow:inset 0 0 10px #000000; 
+
+}
+#content h2
+{
+	text-align:center;	
+	color:#FFF;
+}
+#leftBodyContent{
+	width: 480px;
+	height: auto;
+	float: left;
+}
+#rightBodyContent{
+	width: 480px;
+	height: auto;
+	float: right;
+}
+#mainLinks
+{
+	width:960px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0px;
+	height: auto;
+}
+#teachersLink {
+	float: left;
+}
+#studentsLink {
+	float: right;
+}
+#signupLink
+{
+	width:960px;
+	margin: auto;
+	text-align: right;
+}
+#membersBodyMenu{
+	float:right; 
+	margin:40% 10% 0 0;
+	
+}
+#membersBodyMenu a{
+	color: #FFF;
+	font-size: 25px;
+}
+.uploadImage{
+
+	margin: auto;
+	margin-top: 20px;
+	width: 200px;
+	height: 40px;
+	font-size: 20px;
+	text-align: center;
+	line-height: 2;
+	background-color: #85ECEB;
+	color:#000;
+}
+li{
+	list-style: none;
+	text-align: left;
+	
+}
+.nav{
+	
+	float:right;
+	
+}
+.nav li
+{
+	float:left;
+	font-size:17px;
+	font-weight:400;
+	height: 14.5px;
+	margin:5px;
+	line-height: 1;
+	
+	padding-right: 10px;
+	border-right: 2px;
+	border-style: solid;
+	border-color: #000;
+
+
+}
+ul li input[type="submit"]
+{
+	text-align: center;
+	width: 100px;
+	height: 30px;
+    background-color: #85ECEB;
+    color: #000;
+    font-size: 16px;
+    border: 0;
+    cursor: pointer;
+    float: right;
+
+}
+
+input
+{
+	width: 300px;
+	height: 35px;
+}
+.studentInput{
+	text-align: left;
+}
+input,select {
+    border:1px solid #fff;    
+    font-size:20px;
+    padding:5px; 
+}
+
+input:focus,select:focus { 
+    outline:none;
+    border-color:#333;
+    box-shadow:0 0 10px #333;
+}
+#loginForm
+{
+	color: #fff;
+}
+#loginForm form
+{
+	padding-top:50%;
+	height:auto;
+	font-size:23px;
+	text-align:left;
+}
+#loginForm form ul li
+{
+	margin-bottom: 10px;
+}
+#registrationForm
+{
+	float:right; 
+	padding-top:0px;
+	font-size: 23px;
+	color: #fff;
+}
+#registrationForm input {
+	width: 100%;
+	height: 35px;
+}
+#registrationForm select{
+	width: 50%;
+	height: 40px;
+}
+
+#registrationForm li{
+	padding-bottom: 15px;
+
+}
+
+#errorDisplay
+{
+  color:#333; 
+  font-size:20px; 
+  height:auto;
+  background-color: #FF9999;
+  
+}
+.timeslot{
+	margin:3px; 
+	width: 60px;
+	height: 35px;
+	color: #000;
+	background-color: #A1DEDF;
+	text-align: center;
+	line-height: 2.5;
+	cursor: pointer;
+	font-weight: bold;
+
+}
+.timeslot a{
+	color: #000;
+
+}
+.timeslot:hover{
+	background-color: #9CFFFA;
+}
+.displayTeacherName
+{
+	height: 35px;
+	width: 100px;
+	font-weight: bold;
+	font-size: 20px;
+	color: #000;
+	padding-left: 10px;
+
+}
+#teachersDisplay{
+	height:auto; 
+	width: 400px; 
+	float: left;
+	color: #fff;
+	
+
+}
+#teachersDisplay table tr
+{
+	background-color:#fff; 
+	font-size: 20px;
+	font-weight: bold;
+	color: #333;
+	text-align: left;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #000;
+
+}
+#teachersDisplay table tr:hover
+{
+	background-color:#85ECEB; 
+}
+#teachersDisplay table tr td{
+	padding: 10px;
+}
+
+#teachersDisplay table td a
+{
+	color: #333;
+}
+#teacherMyScheduleDisplay
+{
+	background-color:#fff; 
+	height:auto; 
+	width:400px; 
+	margin-top:20%;
+	color: #333;
+	padding: 15px;
+	float: right;
+	min-height: 325px;
+	font-weight: bold;
+}
+#teacherMyScheduleDisplay table td
+{
+	padding-left: 25px;
+	font-size: 25px;
+}
+#teacherMyScheduleDisplay table td div
+{
+	width: 60px;
+	height: 35px;
+	color: #000;
+	background-color: #A1DEDF;
+	text-align: center;
+	line-height: 2.5;
+	font-size: 15px;
+	
+
+}
+#studentMyScheduleDisplay
+{
+	background-color: #fff;
+	width: 400px;
+	height: auto;
+	margin-top: 20%;
+	color: #333;
+	padding: 15px;
+	min-height: 325px;
+}
+#studentMyScheduleDisplay table td
+{
+	color: #333;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: left;
+	padding-top:5px;
+	padding-bottom: 5px;
+
+}
+#studentMyScheduleDisplay table td div
+{
+	background-color:#85ECEB;
+	text-align: center; 
+}
+.deleteButton{
+	padding-left: 60px;	
+	cursor: pointer;
+	
+}
+#footer
+{
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:0px;
+	height:10%;
+}
+#supportLink
+{
+	float:left;
+}
+#footerRight
+{
+	float:right;
+	height:10%;
+}
+#footerNavigation
+{
+	margin:0px;
+}
+#footerNavigation a{
+	color: #000;
+	font-weight: 600;
+}
+#footerLogo img
+{
+	float:right;
+	margin:0px;
+}
+#copyright
+{
+	margin:auto;
+	width:960px;
+	text-align:center;
+	height:2.22%;
+	
+}

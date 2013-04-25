@@ -1,0 +1,135 @@
+@charset "utf-8";
+/* CSS Document */
+body
+{
+  font-family: 'Merriweather Sans', sans-serif;
+
+}
+h1 
+{
+	font-family: 'Merriweather Sans', sans-serif;
+	font-weight: 400;
+	color: #333;
+	
+}
+h2 
+{
+	font-family: 'Merriweather Sans', sans-serif;
+	font-weight: 200;
+	color:#333;
+}
+p
+{
+	font-family: 'Merriweather Sans', sans-serif;
+	font-weight: 100;
+	font-size:14px;
+	color:#333;
+	
+}
+ul
+{
+	list-style:none;
+	padding:0;
+    margin:0 0 20px 0;
+}
+ul li {
+	
+    padding:5px 0;
+}
+ul li input[type="submit"]
+{
+	text-align: center;
+	margin-top: 25px;
+	width: 100px;
+	height: 30px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    border: 0;
+    cursor: pointer;
+}
+ul li input[type="submit"]:hover{
+  -webkit-animation-name: greenPulse;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-box-shadow: 0 0 25px #fff;
+}
+
+input,select {
+    border:1px solid #fff;    
+    font-size:20px;
+    padding:5px; 
+}
+
+input:focus,select:focus { 
+    outline:none;
+    border-color:#333;
+    box-shadow:0 0 10px #333;
+}
+#wrapper
+{
+	width: 940px;
+	height: auto;
+	margin: auto;
+	text-align: center;
+}
+#header
+{
+	width:940px;
+	height:auto;
+}
+#logo
+{
+	width:200px;
+	height:263px;
+	margin:auto;	
+}
+#title
+{
+	text-align: center;
+}
+#homepageLinks
+{
+	width:365px;
+	height:50px;
+	margin:auto;
+}
+#loginForm
+{
+	background-color: #62E2E2;
+	margin-bottom: 25px;
+	padding: 25px; 
+
+}
+#loginForm form
+{
+	width:250px;
+	height:auto;
+	margin:auto;
+	font-size:20px;
+	text-align:left;
+}
+#errorDisplay
+{
+  text-align: left;
+  color:red; 
+  font-size:20px; 
+  width:940px; 
+  height:auto;
+  
+}
+a{
+	text-decoration: none;
+}
+.button
+{
+	width: 150px;
+	height: 50px;
+	background-color: #62E2E2;
+	color: #222;
+	text-decoration: none;
+	float: left;
+	font-family: 'Merriweather Sans', sans-serif;
+	font-weight: 200;
+}
+
