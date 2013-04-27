@@ -1,6 +1,9 @@
 <?php
 include "core/init.php";
+include "SimpleImage.php";
 include "includes/overall-header.php";
+
+
 teacher_protected_page();
 if(empty($_POST) === false)
 {
@@ -89,7 +92,7 @@ if(empty($_POST) === false)
         }
       }
 
-  }
+  }   
   if($changes_flag === false)
   {
     $errors[] = 'No Changes Made!';
@@ -150,7 +153,10 @@ if(empty($_POST) === false)
 
                       if(in_array($file_extn, $allowed) === true)
                       {
-                       
+                         $image = new SimpleImage();
+                         $image->load($file_temp);
+                         $image->resizeToWidth(389);
+                         $image->save($file_temp);
                         change_profile_image($teacher_data['T_ID'],$file_temp,$file_extn);
                         echo '<META HTTP-EQUIV="Refresh" Content="0; URL= teacher-edit-profile.php">';
                         exit();
@@ -164,18 +170,22 @@ if(empty($_POST) === false)
 
                       
                   }
-                }             
-              if(empty($teacher_data['profile'])===false)
-              {
-                 echo '<a href="teacher-member.php"><img src="',$teacher_data['profile'],'"></a>';
+               }         
+               if(empty($teacher_data['profile'])===false)
+                {
+                   //$tempSrc = resize("$teacher_data[profile]",array("w"=>389,"h"=>389)) or die("doesnt work");
 
-              }
-              else 
-              {
-                echo '<a href="teacher-member.php"><img src="images/teachers_icon_large_389x389.png"></a>';
-              }            
+                   //echo '<a href="teacher-member.php"><img src="$tempSrc"></a>';
+                   
+                   echo '<a href="teacher-member.php"><img class="profileImg" src="',$teacher_data['profile'],'"></a>';
 
-              ?>
+                }
+                else 
+                {
+                  
+                  echo '<a href="teacher-member.php"><img src="images/teachers_icon_large_389x389.png"></a>';
+                }
+              ?>              
               <div id="profilePicUpload">
               <form  action="" method="post" enctype="multipart/form-data">
                 <input type="file" name="profile"><br>

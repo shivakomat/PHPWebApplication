@@ -9,6 +9,10 @@ require 'functions/users.php';
 require 'functions/students.php';
 require 'functions/teachers.php';
 
+
+//seperate functions
+//require 'functions/function.resize.php';
+
 $current_file = explode('/',$_SERVER['SCRIPT_NAME']);
 $current_file = end($current_file);
 

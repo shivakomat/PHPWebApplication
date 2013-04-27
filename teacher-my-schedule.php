@@ -13,7 +13,25 @@ $num_booking_rows = mysql_num_rows($bookings);
         <div id="mainLinks">
           <div id="leftBodyContent">
           	<h2 style="text-align:center; padding-right:75px; padding-top:30px;">MY SCHEDULE</h2>
-            <div id="teachersLink"><a href="teacher-member.php"><img src="images/teachers_icon_large_389x389.png"></a></div>
+            <div id="teachersLink">
+            <?php
+            //loads teacher profile image 
+            if(empty($teacher_data['profile'])===false)
+            {
+               //$tempSrc = resize("$teacher_data[profile]",array("w"=>389,"h"=>389)) or die("doesnt work");
+
+               //echo '<a href="teacher-member.php"><img src="$tempSrc"></a>';
+               
+               echo '<a href="teacher-member.php"><img class="profileImg" src="',$teacher_data['profile'],'"></a>';
+
+            }
+            else 
+            {
+              
+              echo '<a href="teacher-member.php"><img src="images/teachers_icon_large_389x389.png"></a>';
+            }
+            ?>
+            </div>
           </div> 
           <div id="rightBodyContent">
           	<div id="teacherMyScheduleDisplay">
@@ -47,8 +65,6 @@ $num_booking_rows = mysql_num_rows($bookings);
                             <td>$student[username]</td></tr>";
                          }
                       }
-
-
                 ?>
               </table>
             </div>

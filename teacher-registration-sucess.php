@@ -13,7 +13,6 @@ teacherLogged_in_redirect();
 		    	<h2 style="padding-top:3%;"><a href=teacher-login.php>CLICK HERE FOR TEACHER LOGIN PAGE</a></h2> 
 			</div>
 	    </div> 
-
     </div>
 <!end of body content!>
 
