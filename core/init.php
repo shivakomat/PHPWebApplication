@@ -8,6 +8,7 @@ require 'functions/general.php';
 require 'functions/users.php';
 require 'functions/students.php';
 require 'functions/teachers.php';
+require "SimpleImage.php";
 
 
 //seperate functions

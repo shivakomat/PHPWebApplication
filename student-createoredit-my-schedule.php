@@ -28,15 +28,22 @@ $num_rows = mysql_num_rows($result);
                     $teacherPrefix    = mysql_result($result,$i,'prefix');
                     $teacherLastname  = mysql_result($result,$i,'lastname');
                     $teacherSubject   = mysql_result($result,$i,'C_ID');
+                    $teacherProfileImg= mysql_result($result,$i, 'profile');
 
                     $coursesQuery     = mysql_query("SELECT CourseName FROM `courses` WHERE $teacherSubject = C_ID ");
                     $course           = mysql_fetch_assoc($coursesQuery); 
 
                     //$teacherPrefix    = strtoupper($teacherPrefix);
-                    //$teacherLastname  = strtoupper($teacherLastname);
+                    //$teacherLastname  = strtoupper($teacherLastname);     
+                    $image = new SimpleImage ();
+                    $file  = basename($teacherProfileImg);
+                    $image->load($file);
+                    $image->resize(35,35);
+                    $image->save('temp_thumbnail.jpeg');
 
                     echo "<tr>
-                            <td><a href=\"student-teacher-schedule.php?prefix=$teacherPrefix&teachername=$teacherLastname\">$teacherPrefix&nbsp;$teacherLastname</a></td> 
+                            <td><a href=\"student-teacher-schedule.php?prefix=$teacherPrefix&teachername=$teacherLastname\">$teacherPrefix&nbsp;$teacherLastname</a></td>  
+                            <td><img src=\"temp_thumbnail.jpeg\"/></td>
                             <td><a href=\"student-teacher-schedule.php?prefix=$teacherPrefix&teachername=$teacherLastname\">$course[CourseName]</td>                          
                           </tr>";
                   }

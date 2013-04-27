@@ -12,7 +12,7 @@ include "includes/overall-header.php";
             <div id="membersBodyMenu" style="float:left; margin:30% 0 0 10%;">
             	<table width="425px" border="0px" cellspacing="0" cellpadding="0" align ="center">
                 <tr>
-                  <td style="padding-bottom:30px;"><a href="student-my-schedule.php"><img src="images/check_schedule_icon_75x75.png"></a></td>
+                  <td style="padding-bottom:30px;"><a href="student-my-schedule.php"><img src="images/my_schedule_icon_75x75.png"></a></td>
                   <td style="vertical-align:top; padding:20px;"><a href="student-my-schedule.php">MY SCHEDULE</a></td>
                 </tr>
                 <tr>

@@ -1,9 +1,13 @@
 <?php
 function change_profile_image($teacher_id,$file_temp,$file_extn)
 {
-	$file_path = 'images/profile/'.substr(md5(time()),0,10).'.'.$file_extn;
-	move_uploaded_file($file_temp, $file_path);
-	echo "$file_path";
+	$image = new SimpleImage();
+	$image->load($file_temp);
+	$image->resizeToWidth(389);
+	$image->save($file_temp);
+
+	$file_path 			 = 'images/profile/'.substr(md5(time()),0,10).'.'.$file_extn;
+	move_uploaded_file($file_temp, $file_path);	
 	mysql_query("UPDATE `teachers` SET `profile` = '$file_path' WHERE `T_ID` = $teacher_id") or die("couldnt store image on database");
 
 }

@@ -34,7 +34,7 @@ $teacherLastname = strtoupper($teacher_data['lastname']);
                   <td style="vertical-align:top; padding:20px;"><a href="teacher-edit-profile.php">EDIT PROFILE</a></td>
                 </tr>
                 <tr>
-                  <td style="padding-bottom:30px;"><a href="teacher-my-schedule.php"><img href="teacher-my-schedule.php" src="images/check_schedule_icon_75x75.png"></a></td>
+                  <td style="padding-bottom:30px;"><a href="teacher-my-schedule.php"><img href="teacher-my-schedule.php" src="images/my_schedule_icon_75x75.png"></a></td>
                   <td style="vertical-align:top; padding:20px; tex-align:left;"><a href="teacher-my-schedule.php">CHECK SCHEDULE</a></td>
                 </tr>
               </table>

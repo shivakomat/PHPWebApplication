@@ -85,7 +85,7 @@ if(empty($_POST) === false)
               </form>               
           </div>
           
-          <h5 style="text-align:centre; float:right; color:#fff; padding-top:10%;">DON'T HAVE AN ACCOUNT ?&nbsp;<a href="teacher-register.php">SIGN UP NOW</a></h5>
+          <h5 style="text-align:right; float:right; color:#fff; padding-top:10%;">DON'T HAVE AN ACCOUNT ?&nbsp;<a href="teacher-register.php">SIGN UP NOW</a></h5>
          
         </div> 
         <!end of main links div tag !> 

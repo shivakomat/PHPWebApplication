@@ -1,6 +1,5 @@
 <?php
 include "core/init.php";
-include "SimpleImage.php";
 include "includes/overall-header.php";
 
 
@@ -153,10 +152,7 @@ if(empty($_POST) === false)
 
                       if(in_array($file_extn, $allowed) === true)
                       {
-                         $image = new SimpleImage();
-                         $image->load($file_temp);
-                         $image->resizeToWidth(389);
-                         $image->save($file_temp);
+                        
                         change_profile_image($teacher_data['T_ID'],$file_temp,$file_extn);
                         echo '<META HTTP-EQUIV="Refresh" Content="0; URL= teacher-edit-profile.php">';
                         exit();
