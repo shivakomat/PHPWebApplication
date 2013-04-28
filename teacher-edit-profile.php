@@ -153,7 +153,7 @@ if(empty($_POST) === false)
                       if(in_array($file_extn, $allowed) === true)
                       {
                         
-                        change_profile_image($teacher_data['T_ID'],$file_temp,$file_extn);
+                        change_profile_image($teacher_data['T_ID'],$teacher_data['username'],$file_temp,$file_extn);
                         echo '<META HTTP-EQUIV="Refresh" Content="0; URL= teacher-edit-profile.php">';
                         exit();
                        
@@ -173,7 +173,8 @@ if(empty($_POST) === false)
 
                    //echo '<a href="teacher-member.php"><img src="$tempSrc"></a>';
                    
-                   echo '<a href="teacher-member.php"><img class="profileImg" src="',$teacher_data['profile'],'"></a>';
+
+                   echo '<a href="teacher-member.php"><img class="profileImg" src="images/profile/'.$teacher_data['username'].'/_profile_img.jpg"></a>';
 
                 }
                 else 

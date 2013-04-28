@@ -22,7 +22,7 @@ $num_booking_rows = mysql_num_rows($bookings);
 
                //echo '<a href="teacher-member.php"><img src="$tempSrc"></a>';
                
-               echo '<a href="teacher-member.php"><img class="profileImg" src="',$teacher_data['profile'],'"></a>';
+               echo '<a href="teacher-member.php"><img class="profileImg" src="images/profile/'.$teacher_data['username'].'/_profile_img.jpg"></a>';
 
             }
             else 

@@ -16,7 +16,8 @@ $teacherLastname = strtoupper($teacher_data['lastname']);
             if(empty($teacher_data['profile'])===false)
             {
                              
-               echo '<a href="teacher-member.php"><img class="profileImg" src="',$teacher_data['profile'],'"></a>';    
+              echo '<a href="teacher-member.php"><img class="profileImg" src="images/profile/'.$teacher_data['username'].'/_profile_img.jpg"></a>';
+                  
             }
             else 
             {
