@@ -43,7 +43,7 @@ $num_rows = mysql_num_rows($result);
 
                     echo "<tr>
                             <td><a href=\"student-teacher-schedule.php?prefix=$teacherPrefix&teachername=$teacherLastname\">$teacherPrefix&nbsp;$teacherLastname</a></td>  
-                            <td><img src=\"temp_thumbnail.jpeg\"/></td>
+                            <td><img src=\"images/profile/'.$teacher_data[username].'/_profile_thumbnail.jpg\"></td>
                             <td><a href=\"student-teacher-schedule.php?prefix=$teacherPrefix&teachername=$teacherLastname\">$course[CourseName]</td>                          
                           </tr>";
                   }

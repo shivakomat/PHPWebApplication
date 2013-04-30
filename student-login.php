@@ -80,10 +80,11 @@ if(empty($_POST) === false)
 
                 </li>          
               </ul>
-              </form>               
+              </form> 
+              <h5 style="text-align:right; color:#fff; float:left; padding-top:10%;">DON'T HAVE AN ACCOUNT? &nbsp;<a href="student-register.php">SIGN UP NOW</a></h5>              
           </div>
          
-          <h5 style="text-align:right; color:#fff; float:left; padding-top:10%;">DON'T HAVE AN ACCOUNT? &nbsp;<a href="student-register.php">SIGN UP NOW</a></h5>
+          
 
         </div>         
         <!end of main links!>  

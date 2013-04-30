@@ -170,9 +170,9 @@ ul li input[type="submit"]
     border: 0;
     cursor: pointer;
     float: right;
+    font-weight: bold;
 
 }
-
 input
 {
 	width: 300px;
@@ -185,6 +185,7 @@ input,select {
     border:1px solid #fff;    
     font-size:20px;
     padding:5px; 
+    text-transform: uppercase;
 }
 
 input:focus,select:focus { 
@@ -213,10 +214,14 @@ input:focus,select:focus {
 	padding-top:0px;
 	font-size: 23px;
 	color: #fff;
+	text-transform: uppercase;
+	
 }
 #registrationForm input {
 	width: 100%;
 	height: 35px;
+	text-transform: uppercase;
+
 }
 #registrationForm select{
 	width: 50%;

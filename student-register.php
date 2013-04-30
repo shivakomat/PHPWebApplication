@@ -124,7 +124,7 @@ if(empty($_POST) === false && empty($errors)===true)
 	 							<td>
 	 								<li>
 										STUDENT ID*<br>
-										<input style="width:100%;" type="text" name="username" value ="<?php echo "$username" ?>">
+										<input style="width:100%;" type="text" placeholder="100338919" name="username" value ="<?php echo "$username" ?>">
 									</li>
 	 							</td>
 	 							<td>
@@ -140,7 +140,7 @@ if(empty($_POST) === false && empty($errors)===true)
 	 							<th colspan="2">
 	 								<li>
 										EMAIL*<br>
-										<input style="width:100%;" type="text" name="email" value="<?php echo "$email" ?>">
+										<input style="width:100%;" type="text" placeholder="example@email.com" name="email" value="<?php echo "$email" ?>">
 									</li>
 	 							</td>
 	 						</tr>	 						
@@ -148,7 +148,7 @@ if(empty($_POST) === false && empty($errors)===true)
 	 							<th colspan="2">
 	 								<li>
 										PHONE NUMBER*<br>
-										<input style="width:100%;" type="text" name="phonenumber" value ="<?php echo "$phonenumber" ?>">
+										<input style="width:100%;" type="text" placeholder="905 416 2890" name="phonenumber" value ="<?php echo "$phonenumber" ?>">
 									</li>
 	 							</td>
 	 						</tr>	 						

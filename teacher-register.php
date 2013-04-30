@@ -107,12 +107,12 @@ if(empty($_POST) === false && empty($errors)===true)
           </div> 
           <div id="rightBodyContent">
           	<div id="registrationForm">   
-	            <form style="padding-top:20px;" action="teacher-register.php" method="post">
+	            <form style="padding-top:20px; font-style:normal;" action="teacher-register.php" method="post">
 	 				<ul>
 	 					<table width="400px;" border="0" cellspacing="0" cellpadding="0">
 	 						<tr>
 	 							<th colspan="2">
-	 								<li>Prefix*<br>
+	 								<li >Title*<br>
 	 								<select name="prefix" style="width:75px;">
 									  <option><?php echo "$prefix" ?></option>	
 									  <option value="Mr.">Mr</option>
@@ -154,7 +154,7 @@ if(empty($_POST) === false && empty($errors)===true)
 							<tr>	 							
 	 							<th colspan="2">
 			 						<li>Email*<br>
-									<input style="width:100%;" type="text" name="email" value="<?php echo "$email" ?>">
+									<input style="width:100%;" type="text" name="email" placeholder="myemail@peel.sb.com" value="<?php echo "$email" ?>">
 									</li>
 								</th>	 							
 	 						</tr>
