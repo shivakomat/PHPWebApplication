@@ -103,7 +103,7 @@ if(empty($_POST) === false && empty($errors)===true)
         <div id="mainLinks">
           <div id="leftBodyContent">
           	<h2 style="text-align:center; padding-right:75px; padding-top:30px;">SIGN UP</h2>
-            <div id="teachersLink"><a href="teacher-login.php"><img src="images/teachers_icon_large_389x389.png"></a></div>
+            <div id="teachersLink"style="border:none;"><a href="teacher-login.php"><img src="images/teachers_icon_large_389x389.png"></a></div>
           </div> 
           <div id="rightBodyContent">
           	<div id="registrationForm">   
@@ -125,7 +125,7 @@ if(empty($_POST) === false && empty($errors)===true)
 	 						<tr>	
 	 							<td>
 			 						<li>First Name*<br>
-									<input type="text" name="firstname" value="<?php echo "$firstname" ?>">
+									<input type="text" name="firstname" value="<?php echo "$firstname" ?>" title="Enter Your FirstName">
 									</li> 
 								</td>
 
@@ -138,7 +138,7 @@ if(empty($_POST) === false && empty($errors)===true)
 	 						<tr>
 	 							<td>
 			 						<li>Username*<br>
-									<input style="width=100%;" type="text" name="username" value ="<?php echo "$username" ?>">
+									<input style="width=100%; text-transform:lowercase;" type="text" name="username" value ="<?php echo "$username" ?>">
 									</li> 
 								</th>
 								<td>

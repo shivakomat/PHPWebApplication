@@ -2,6 +2,7 @@ html
 {
 	max-height: 100%;
 }
+
 @font-face {
         font-family: "BebasNeue";
         font-style: normal;
@@ -84,27 +85,52 @@ a{
 	height: auto;
 }
 #teachersLink {
+	
 	float: left;
 	width: 389px;
-	height: 389px;
-
-}
-#teachersLink img{
-	width: 100%;
-	height: 100%;
-	border-radius: 200px;
-	-webkit-border-radius: 200px;
-	-moz-border-radius: 200px;
-
-}
-.profileImg{
+	height: 389px;	
 	border-width: 5px;
 	border-style: solid;
 	border-color: #fff;
+	border-radius: 200px;
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
 	filter: alpha(opacity=0);
+	overflow: hidden;
+	text-align: center;
+
+
+}
+#teachersLink span{
+	display: block;
+
+}
+#teachersLink span img{
+	display: inline-block;
+	margin:auto;
+}
+
+.profileImg_thumnail{
+	border-radius: 200px;
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+	width: 35px;
+	height: 35px;
+
 }
 #studentsLink {
 	float: right;
+	width: 389px;
+	height: 389px;	
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fff;
+	border-radius: 200px;
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+	filter: alpha(opacity=0);
+	overflow: hidden;
+	text-align: center;
 }
 #signupLink
 {
@@ -171,6 +197,7 @@ ul li input[type="submit"]
     cursor: pointer;
     float: right;
     font-weight: bold;
+    text-transform: uppercase;
 
 }
 input
@@ -186,6 +213,7 @@ input,select {
     font-size:20px;
     padding:5px; 
     text-transform: uppercase;
+
 }
 
 input:focus,select:focus { 
@@ -193,6 +221,7 @@ input:focus,select:focus {
     border-color:#333;
     box-shadow:0 0 10px #333;
 }
+
 #loginForm
 {
 	color: #fff;
@@ -203,10 +232,20 @@ input:focus,select:focus {
 	height:auto;
 	font-size:23px;
 	text-align:left;
+	text-transform: uppercase;
+
 }
 #loginForm form ul li
 {
 	margin-bottom: 10px;
+	margin-left: 0px;
+}
+#loginForm form input{
+	text-transform: lowercase;
+}
+#loginForm form input[type="submit"]
+{
+	text-transform: uppercase;
 }
 #registrationForm
 {
@@ -215,6 +254,7 @@ input:focus,select:focus {
 	font-size: 23px;
 	color: #fff;
 	text-transform: uppercase;
+	width: auto;
 	
 }
 #registrationForm input {
@@ -272,9 +312,10 @@ input:focus,select:focus {
 }
 #teachersDisplay{
 	height:auto; 
-	width: 400px; 
+	width: 100%; 
 	float: left;
 	color: #fff;
+	text-transform: uppercase;
 	
 
 }
@@ -296,6 +337,7 @@ input:focus,select:focus {
 }
 #teachersDisplay table tr td{
 	padding: 10px;
+	vertical-align: middle;
 }
 
 #teachersDisplay table td a
@@ -389,7 +431,8 @@ input:focus,select:focus {
     margin-left: 50%;
     
 
-}  
+} 
+
 #footer
 {
 	width:960px;

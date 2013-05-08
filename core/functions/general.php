@@ -1,7 +1,7 @@
 <?php
 	function email($to, $subject, $body)
 	{
-		mail($to,$subject,$body,'From: admin@skomat.com');
+		mail($to,$subject,$body,'From: admin@skomat.com')or die("mail function is not working atm");
 	}
 	function studentLogged_in_redirect(){
 		if(studentLogged_in() === true)

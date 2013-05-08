@@ -38,9 +38,7 @@ else
 		
 	}
 }
-
 ?>
-
 <!Start of Error Displaying!>
 <div class="grid_12 omega" id="errorDisplay">
    <?php 
@@ -51,16 +49,20 @@ else
 </div>
 <!End of Error Displaying!> 
 <!start of body content!>   
-        <?php 
-        if($sucess_flag === true)
-        { ?>
-	        <h2>You have sucessfully Activated your account</h2>
-			<h2><a href="teacher-login.php">Click Here you to login!!</a></h2> 
-		<?php
-		}?>     
-        <!end of main links!>  
+<?php 
+if($sucess_flag === true)
+{ ?>
 
-    </div>
-<!end of body content!>
+	<div class="grid_12 omega" id="content">
+	    <div class="grid_12 omega">
+		    <div id="mainLinks" style="width:960px; margin:auto;">
+		    	<h2 style="padding-top:20%;">YOUR ACCOUNT HAS BEEN SUCCESSFULLY ACTIVATED.</h2>
+		    	<h2 style="padding-top:3%;"><a href=teacher-login.php>CLICK HERE FOR TEACHER LOGIN PAGE</a></h2> 
+			</div>
+	    </div> 
+	</div>
 
+<?php
+}?>     
+<!end of main links!>  
 <?php include "includes/overall-footer.php"; ?>

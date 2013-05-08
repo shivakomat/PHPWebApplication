@@ -28,7 +28,7 @@ include "includes/overall-header.php";
           </div> 
           <div id="rightBodyContent">
           	<h2 style="text-align:center; padding-left:75px; padding-top:30px;"><?php echo "Hi $student_data[firstname]"; ?></h2>
-            <div id="studentsLink"><a href="student-member.php"><img src="images/parents_icon_large_389x389.png"></a></div>
+            <div id="studentsLink" style="border:none; height:auto;"><a href="student-member.php"><img src="images/parents_icon_large_389x389.png"></a></div>
           </div>
         </div> <!end of main links div tag !>      
 

@@ -59,9 +59,9 @@ if(empty($_POST) === false)
     <div class="grid_12 omega" id="content">
 
         <!start of mainlinks div !>
-        <div id="mainLinks">          
-          <div id="teachersLink"><a href="teacher-login.php">
-            <h2 style="text-align:centre; padding-top:30px;">LOGIN</h2>
+        <div id="mainLinks">                   
+          <div id="teachersLink" style="border:none; border-radius:0px; height:auto;"><a href="teacher-login.php">
+            <h2 style="text-align:centre; padding-top:30px;">LOGIN</h2> 
             <img src="images/teachers_icon_large_389x389.png"></a>
           </div>
           <div id="loginForm" style="float:right;">   
@@ -76,14 +76,14 @@ if(empty($_POST) === false)
                 <li style="font-size:15px; text-align:right;">FORGOT <a href="recover.php?mode=username&type=teachers"> USERNAME&nbsp;</a>OR<a href="recover.php?mode=password&type=teachers"> PASSWORD</a>?
                 </li>
                 <li>
-                  <input type="submit" name="submit" value="Log In">
+                  <input type="submit" name="submit" value="LOG IN">
                 </li> 
                 <li>
 
                 </li>          
               </ul>
               </form>  
-              <h5 style="text-align:right; float:right; color:#fff; padding-top:10%;">DON'T HAVE AN ACCOUNT ?&nbsp;<a href="teacher-register.php">SIGN UP NOW</a></h5>             
+              <h5 style="text-align:right; color:#fff; padding-top:20%;">DON'T HAVE AN ACCOUNT?<br><a href="teacher-register.php">SIGN UP NOW</a></h5>             
           </div>
           
          

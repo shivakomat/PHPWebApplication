@@ -1,28 +1,14 @@
 <?php
 function change_profile_image($teacher_id,$teacher_username,$file_temp,$file_extn)
 {
-	$image = new SimpleImage();
-	$image->load($file_temp);
-	$image->resizeToWidth(389);
-	$image->save($file_temp);
 	$dir_path ='images/profile/'.$teacher_username;
 	if (!file_exists($dir_path)) {
 	mkdir($dir_path);
 	}
 	$file_path 	 = 'images/profile/'.$teacher_username.'/_profile_img.'.$file_extn;
 	move_uploaded_file($file_temp,$file_path);
-	
-	$oldfilename 	 = 'images/profile/'.$teacher_username.'/_profile_img.'.$file_extn;
-	$newfilename     = 'images/profile/'.$teacher_username.'/_profile_thumbnail.'.$file_extn;
-	$image->load($oldfilename);
-	$image->resize(50,50);
-	$image->save($newfilename);
 
-	//copy($oldfilename, $newfilename);
-	//move_uploaded_file($file_temp, destination)
-	//$file_path 			 = 'images/profile/'.substr(md5(time()),0,10).'.'.$file_extn;
-	//move_uploaded_file($file_temp, $file_path);	
-	//mysql_query("UPDATE `teachers` SET `profile` = '$file_path' WHERE `T_ID` = $teacher_id") or die("couldnt store image on database");
+    mysql_query("UPDATE `teachers` SET `profile` = 1 WHERE `T_ID` = $teacher_id") or die("Couldnt Update the Profile");
 
 }
 
@@ -34,7 +20,6 @@ function activate_teacher($email,$emailcode)
 	if(mysql_result(mysql_query("SELECT COUNT(`T_ID`) FROM `teachers` WHERE `email` = '$email' AND `emailcode` = '$emailcode' AND `active` = 0"), 0) == 1)
 	{
 		mysql_query("UPDATE `teachers` SET `active` = 1 WHERE `email` = '$email'") or die("Failed to set user Active");
-		//query to update user active status
 		return true;
 
 	}else

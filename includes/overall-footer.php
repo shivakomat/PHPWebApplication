@@ -2,11 +2,11 @@
         <div class="grid_12 omega">
             <div id="footer">
                 <div id="supportLink"><img src="images/support_button_115x89.png"></div>
-                <?php 
-                if(studentLogged_in() === false && teacherLogged_in() === false)
-                {
-                ?>
                     <div id="footerRight">
+                        <?php 
+                        if(studentLogged_in() === false && teacherLogged_in() === false)
+                        {
+                        ?>
                         <div id="footerNavigation">
                             <ul class="nav">
                                 <li><a href="index.php">HOME</a></li>
@@ -15,10 +15,11 @@
                                 <li style="border-right:0px;"><a href="#">NEWS</a></li>   
                             </ul>            
                         </div>
+                         <?php 
+                        } ?>
                         <div id="footerLogo"><img src="images/footer_logo_122x41.png"></div>
                     </div>
-                <?php 
-                } ?>
+               
 
 
             </div>           

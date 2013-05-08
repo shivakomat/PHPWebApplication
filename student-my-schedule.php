@@ -57,13 +57,13 @@ $num_booking_rows = mysql_num_rows($bookings);
                 <h3 style="float:right; color:#fff; line-height:1.7;">&nbsp;PRINT</h3>
               </div>
               <div class="timeslot" style=" background-color:#85ECEB; float:right;  padding-left:20px; padding-right:20px; text-align:center;">
-              <a href="student-member.php">BACK</a>
+              <a href="student-createoredit-my-schedule.php">EDIT</a>
               </div>
             </div>            
           </div> <!end of left body content !>
           <div id="rightBodyContent">
           	<h2 style="text-align:center; padding-left:75px; padding-top:30px;">MY SCHEDULE</h2>
-            <div id="studentsLink"><a href="student-member.php"><img src="images/parents_icon_large_389x389.png"></a>
+            <div id="studentsLink" style="border:none; height:auto;" ><a href="student-member.php"><img src="images/parents_icon_large_389x389.png"></a>
             </div>
           </div>
         </div> <!end of main links div tag !>      

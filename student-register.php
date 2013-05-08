@@ -24,7 +24,6 @@ if(empty($_POST) === false)
   		break 1;
   	}
   }
-
   if(empty($errors)===true)
   {  	
   	//code to validate each fields and then add it to the query
@@ -89,6 +88,25 @@ if(empty($_POST) === false && empty($errors)===true)
 		exit();
 }
 ?>
+<script>
+  function isCharacterKey(evt)
+  {
+  	 var charCode = (evt.which) ? evt.which : event.keyCode;
+      if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57)) {          
+          return true;
+      } else {
+          return false;
+      }
+  }
+  function isNumberKey(evt) {
+      var charCode = (evt.which) ? evt.which : event.keyCode;
+      if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57)) {          
+          return false;
+      } else {
+          return true;
+      }      
+  }
+</script>
 <!Start of Error Displaying!>
 <div class="grid_12 omega" id="errorDisplay">
    <?php 
@@ -110,13 +128,13 @@ if(empty($_POST) === false && empty($errors)===true)
 	 							<td>
 	 								<li>
 										FIRSTNAME*<br>
-										<input type="text" name="firstname" value="<?php echo "$firstname" ?>">
+										<input type="text" name="firstname" onkeypress="isCharacterKey(event)" value="<?php echo "$firstname" ?>">
 									</li>
 	 							</td>
 	 							<td>
 	 								<li>
 										LASTNAME*<br>
-										<input type="text" name="lastname" value="<?php echo "$lastname" ?>">
+										<input type="text" name="lastname" onkeypress="isCharacterKey(event)" value="<?php echo "$lastname" ?>">
 									</li>
 	 							</td>
 	 						</tr>
@@ -124,7 +142,7 @@ if(empty($_POST) === false && empty($errors)===true)
 	 							<td>
 	 								<li>
 										STUDENT ID*<br>
-										<input style="width:100%;" type="text" placeholder="100338919" name="username" value ="<?php echo "$username" ?>">
+										<input style="width:100%;" type="text" placeholder="100338919" name="username" onkeypress="return isNumberKey(event)" maxlength="10" value ="<?php echo "$username" ?>">
 									</li>
 	 							</td>
 	 							<td>
@@ -140,7 +158,7 @@ if(empty($_POST) === false && empty($errors)===true)
 	 							<th colspan="2">
 	 								<li>
 										EMAIL*<br>
-										<input style="width:100%;" type="text" placeholder="example@email.com" name="email" value="<?php echo "$email" ?>">
+										<input style="width:100%;" type="text" placeholder="example@email.com" name="email"  value="<?php echo "$email" ?>">
 									</li>
 	 							</td>
 	 						</tr>	 						
@@ -148,7 +166,7 @@ if(empty($_POST) === false && empty($errors)===true)
 	 							<th colspan="2">
 	 								<li>
 										PHONE NUMBER*<br>
-										<input style="width:100%;" type="text" placeholder="905 416 2890" name="phonenumber" value ="<?php echo "$phonenumber" ?>">
+										<input style="width:100%;" type="text" placeholder="9054162890" name="phonenumber" onkeypress="return isNumberKey(event)" maxlength="10" value ="<?php echo "$phonenumber" ?>">
 									</li>
 	 							</td>
 	 						</tr>	 						
@@ -168,7 +186,7 @@ if(empty($_POST) === false && empty($errors)===true)
           </div> 
           <div id="rightBodyContent">
           	<h2 style="text-align:center; padding-left:75px; padding-top:30px;">SIGN UP</h2>
-            <div id="studentsLink"><a href="student-login.php"><img src="images/parents_icon_large_389x389.png"></a></div>
+            <div id="studentsLink" style="border:none;"><a href="student-login.php"><img src="images/parents_icon_large_389x389.png"></a></div>
           </div>
         </div> <!end of main links div tag !>     
     </div>

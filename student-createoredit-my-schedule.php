@@ -21,31 +21,35 @@ $num_rows = mysql_num_rows($result);
             <div style="float:right; width:50%; text-align:left;"><h3>SUBJECT</h3></div>
             </div>        
             <div id="teachersDisplay">              
-                <table width="400px" border="3px" cellspacing="0" cellpadding="0" align = "center">
+                <table  border="3px" cellspacing="0" cellpadding="0" align = "center">
                   <?php
                   for($i=0;$i<$num_rows;$i++)
                   {
-                    $teacherPrefix    = mysql_result($result,$i,'prefix');
-                    $teacherLastname  = mysql_result($result,$i,'lastname');
-                    $teacherSubject   = mysql_result($result,$i,'C_ID');
-                    $teacherProfileImg= mysql_result($result,$i, 'profile');
+                    $teacherPrefix        = mysql_result($result,$i,'prefix');
+                    $teacherLastname      = mysql_result($result,$i,'lastname');
+                    $teacherSubject       = mysql_result($result,$i,'C_ID');
+                    $teacherProfileImg    = mysql_result($result,$i,'profile');
+                    $teacherUsername      = mysql_result($result,$i,'username');
+                    
+
 
                     $coursesQuery     = mysql_query("SELECT CourseName FROM `courses` WHERE $teacherSubject = C_ID ");
-                    $course           = mysql_fetch_assoc($coursesQuery); 
-
-                    //$teacherPrefix    = strtoupper($teacherPrefix);
-                    //$teacherLastname  = strtoupper($teacherLastname);     
-                    $image = new SimpleImage ();
-                    $file  = basename($teacherProfileImg);
-                    $image->load($file);
-                    $image->resize(35,35);
-                    $image->save('temp_thumbnail.jpeg');
-
+                    $course           = mysql_fetch_assoc($coursesQuery);                   
+                    
+                    
                     echo "<tr>
-                            <td><a href=\"student-teacher-schedule.php?prefix=$teacherPrefix&teachername=$teacherLastname\">$teacherPrefix&nbsp;$teacherLastname</a></td>  
-                            <td><img src=\"images/profile/'.$teacher_data[username].'/_profile_thumbnail.jpg\"></td>
-                            <td><a href=\"student-teacher-schedule.php?prefix=$teacherPrefix&teachername=$teacherLastname\">$course[CourseName]</td>                          
-                          </tr>";
+                            <td><a href=\"student-teacher-schedule.php?prefix=$teacherPrefix&teachername=$teacherLastname&teacherusername=$teacherUsername&teacherProfileValue=$teacherProfileImg\">$teacherPrefix&nbsp;$teacherLastname</a></td>";                            
+                            if($teacherProfileImg == 1){
+                               echo "<td><a href=\"student-teacher-schedule.php?prefix=$teacherPrefix&teachername=$teacherLastname&teacherusername=$teacherUsername&teacherProfileValue=$teacherProfileImg\"><img class=\"profileImg_thumnail\" src=\"images/profile/$teacherUsername/_profile_img.jpg\"/></a></td>";
+
+                            }
+                            else
+                            {
+                               echo "<td><a href=\"student-teacher-schedule.php?prefix=$teacherPrefix&teachername=$teacherLastname&teacherusername=$teacherUsername&teacherProfileValue=$teacherProfileImg\"><img class=\"profileImg_thumnail\" src=\"images/profile/default_no_image_120x120.jpg\"/></a></td>";
+                            }
+                            echo "<td><a href=\"student-teacher-schedule.php?prefix=$teacherPrefix&teachername=$teacherLastname&teacherusername=$teacherUsername&teacherProfileValue=$teacherProfileImg\">$course[CourseName]</td>                          
+                        </tr>";
+                          
                   }
                   
                   ?>
@@ -54,8 +58,8 @@ $num_rows = mysql_num_rows($result);
             </div>             
           </div> 
           <div id="rightBodyContent">
-          	<h2 style="text-align:center; padding-left:75px; padding-top:30px;">PICK YOUR TEACHER</h2>
-            <div id="studentsLink"><a href="student-member.php"><img src="images/parents_icon_large_389x389.png"></a></div>
+          	<h2 style="text-align:center; padding-left:75px; padding-top:30px;">pick your teacher</h2>
+            <div id="studentsLink" style="border:none; height:auto;"><a href="student-member.php"><img src="images/parents_icon_large_389x389.png"></a></div>
           </div>
         </div> <!end of main links div tag !>      
 

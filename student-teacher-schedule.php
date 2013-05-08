@@ -5,6 +5,8 @@ student_protect_page();
 
 $prefix = $_GET['prefix'];
 $currentTeacher = $_GET['teachername'];
+$currentTeacherUsername = $_GET['teacherusername'];
+$currentTeacherProfileValue = $_GET['teacherProfileValue'];
 
 $timeslots_query = "SELECT * FROM timeslots";
 $result = mysql_query($timeslots_query);
@@ -81,7 +83,7 @@ $num_booking_rows = mysql_num_rows($bookings);
               ?>
               </table>              
             </div>  
-            <div style="background-color:#81B9BA; height:auto; width:400px; padding:20px;">
+            <div style="background-color:#81B9BA; height:auto; width:400px; padding:20px; text-transform:uppercase;">
               <h3>MY SCHEDULE</h3>
               <table width="400px" border="0px" cellspacing="0" cellpadding="0" align = "center">
                 <?php
@@ -117,8 +119,22 @@ $num_booking_rows = mysql_num_rows($bookings);
 
           </div> 
           <div id="rightBodyContent">
-          	<h2 style="text-align:center; padding-left:75px; padding-top:30px;"><?php echo "$_GET[prefix] $currentTeacher"; ?></h2>
-            <div id="studentsLink"><a href="student-member.php"><img src="images/parents_icon_large_389x389.png"></a></div>
+          	<h2 style="text-align:center; padding-left:75px; padding-top:30px; text-transform:uppercase;"><?php echo "$_GET[prefix] $currentTeacher"; ?></h2>
+            
+              <?php 
+              if($currentTeacherProfileValue==1){
+                echo '<div id="studentsLink">';
+                echo "<a href=\"student-member.php\"><img class=\"profileImg\" src=\"image.php?width=389&amp;height=389&amp;quality=100&amp;image=/Fletechers/images/profile/$currentTeacherUsername/_profile_img.jpg\"></a>";
+
+              }
+              else
+              {
+                echo '<div id="studentsLink" style="border:none; height:auto;">';
+                echo "<img src=\"images/parents_icon_large_389x389.png\">";
+              }
+                            
+              ?>
+            </div>
           </div>
         </div> <!end of main links div tag !>      
 

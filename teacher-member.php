@@ -10,18 +10,20 @@ $teacherLastname = strtoupper($teacher_data['lastname']);
         <div id="mainLinks">
           <div id="leftBodyContent">
           	<h2 style="text-align:center; padding-right:75px; padding-top:30px;"><?php echo "$teacherPrefix&nbsp;$teacherLastname"; ?></h2>
-            <div id="teachersLink">
+            
             <?php
-            //loads teacher profile image 
-            if(empty($teacher_data['profile'])===false)
+            //loads teacher profile image
+            if($teacher_data['profile'] == 1)
             {
                              
-              echo '<a href="teacher-member.php"><img class="profileImg" src="images/profile/'.$teacher_data['username'].'/_profile_img.jpg"></a>';
+              echo '<div id="teachersLink">';
+              echo '<span><img class="profileImg" src="image.php?width=389&amp;height=389&amp;quality=100&amp;image=/Fletechers/images/profile/'.$teacher_data['username'].'/_profile_img.jpg"></span>';
                   
             }
             else 
             {
               
+              echo '<div id="teachersLink" style="border:none;">';
               echo '<a href="teacher-member.php"><img src="images/teachers_icon_large_389x389.png"></a>';
             }
             ?>

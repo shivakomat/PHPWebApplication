@@ -47,6 +47,16 @@ if(empty($_POST) === false)
 
 //End of validation//
 ?>
+<script>
+  function isNumberKey(evt) {
+      var charCode = (evt.which) ? evt.which : event.keyCode;
+      if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57)) {          
+          return false;
+      } else {
+          return true;
+      }      
+  }
+</script>
 <!Start of Error Displaying!>
 <div class="grid_12 omega" id="errorDisplay">
    <?php 
@@ -61,12 +71,14 @@ if(empty($_POST) === false)
 
          <!start of main links!>
         <div id="mainLinks">
-          <div id="studentsLink"><h2 style="text-align:centre; padding-top:30px;">LOGIN</h2><a href="student-login.php"><img src="images/parents_icon_large_389x389.png"></a></div>
-           <div id="loginForm" style="float:left;">   
+          <div id="studentsLink" style="border:none; height:auto;">
+           <h2 style="text-align:centre; padding-top:30px;">LOGIN</h2><a href="student-login.php"><img src="images/parents_icon_large_389x389.png"></a>
+          </div>
+          <div id="loginForm" style="float:left;">   
               <form action="student-login.php" method="POST">
               <ul>
                 <li>STUDENT ID<br>
-                  <input type="text" name="username">                 
+                  <input type="text" name="username" onkeypress="return isNumberKey(event)">                 
                 </li>
                 <li>PASSWORD<br>
                   <input type="password" name="password">
@@ -81,9 +93,8 @@ if(empty($_POST) === false)
                 </li>          
               </ul>
               </form> 
-              <h5 style="text-align:right; color:#fff; float:left; padding-top:10%;">DON'T HAVE AN ACCOUNT? &nbsp;<a href="student-register.php">SIGN UP NOW</a></h5>              
-          </div>
-         
+              <h5 style="text-align:left; color:#fff; padding-top:20%;">DON'T HAVE AN ACCOUNT?<br><a href="student-register.php">SIGN UP NOW</a></h5>              
+          </div>   
           
 
         </div>         

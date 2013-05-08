@@ -13,35 +13,33 @@ $num_booking_rows = mysql_num_rows($bookings);
         <div id="mainLinks">
           <div id="leftBodyContent">
           	<h2 style="text-align:center; padding-right:75px; padding-top:30px;">MY SCHEDULE</h2>
-            <div id="teachersLink">
             <?php
-            //loads teacher profile image 
-            if(empty($teacher_data['profile'])===false)
+            //loads teacher profile image
+            if($teacher_data['profile'] == 1)
             {
-               //$tempSrc = resize("$teacher_data[profile]",array("w"=>389,"h"=>389)) or die("doesnt work");
-
-               //echo '<a href="teacher-member.php"><img src="$tempSrc"></a>';
-               
-               echo '<a href="teacher-member.php"><img class="profileImg" src="images/profile/'.$teacher_data['username'].'/_profile_img.jpg"></a>';
-
+                             
+              echo '<div id="teachersLink">';
+              echo '<span><img class="profileImg" src="image.php?width=389&amp;height=389&amp;quality=100&amp;image=images/profile/'.$teacher_data['username'].'/_profile_img.jpg"></span>';
+                  
             }
             else 
             {
               
+              echo '<div id="teachersLink" style="border:none;">';
               echo '<a href="teacher-member.php"><img src="images/teachers_icon_large_389x389.png"></a>';
             }
             ?>
             </div>
           </div> 
-          <div id="rightBodyContent">
-          	<div id="teacherMyScheduleDisplay">
+          <div id="rightBodyContent">           
+          	<div id="teacherMyScheduleDisplay">                           
               <h3 style="color:#333; text-align:left;">MY SCHEDULE</h3>
               <table width="400px" border="0px" cellspacing="0" cellpadding="0" align = "center">
                 <?php
                  //start of booking table check
                       for($b=0;$b<$num_booking_rows;$b++)
                       {
-                         $bookedTeacher    = mysql_result($bookings, $b, 'T_ID');
+                         $bookedTeacher    = mysql_result($bookings, $b, 'T_ID');                                  
                          //echo "<tr><td>$teacher_data[T_ID] /////  $bookedTeacher ///</td></tr>"; 
 
 

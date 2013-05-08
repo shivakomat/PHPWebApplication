@@ -11,8 +11,8 @@ teacherLogged_in_redirect();
         <h2 style="padding-top:30px;">WHICH ONE ARE YOU?</h2>
         </div>
         <div id="mainLinks" style="width:960px; margin:auto;">
-          <div id="teachersLink"><a href="teacher-login.php"><img src="images/teachers_icon_large_389x389.png"></a></div>
-          <div id="studentsLink"><a href="student-login.php"><img src="images/parents_icon_large_389x389.png"></a></div>    
+          <div id="teachersLink" style="border:none;"><a href="teacher-login.php"><img src="images/teachers_icon_large_389x389.png"></a></div>
+          <div id="studentsLink" style="border:none; height:auto;"><a href="student-login.php"><img src="images/parents_icon_large_389x389.png"></a></div>    
         </div>
     </div>
 <!end of body content!>

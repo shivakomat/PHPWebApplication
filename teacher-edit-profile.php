@@ -133,10 +133,8 @@ if(empty($_POST) === false)
 <!start of body content!>
     <div class="grid_12 omega" id="content">
         <div id="mainLinks">
-          <form  action="teacher-edit-profile.php" method="post" enctype="multipart/form-data">
           <div id="leftBodyContent">
-          	<h2 style="text-align:center; padding-right:75px; padding-top:30px;">EDIT PROFILE</h2>
-            <div id="teachersLink">
+          	<h2 style="text-align:center; padding-right:75px; padding-top:30px;">EDIT PROFILE</h2>            
               <?php 
                if(isset($_FILES['profile'])===true)
                 {
@@ -166,36 +164,34 @@ if(empty($_POST) === false)
 
                       
                   }
-               }         
-               if(empty($teacher_data['profile'])===false)
-                {
-                   //$tempSrc = resize("$teacher_data[profile]",array("w"=>389,"h"=>389)) or die("doesnt work");
-
-                   //echo '<a href="teacher-member.php"><img src="$tempSrc"></a>';
-                   
-
-                   echo '<a href="teacher-member.php"><img class="profileImg" src="images/profile/'.$teacher_data['username'].'/_profile_img.jpg"></a>';
+                }         
+               if($teacher_data['profile'] == 1)
+                { 
+                   echo '<div id="teachersLink">';
+                   echo '<span><img class="profileImg" src="image.php?width=389&amp;height=389&amp;quality=100&amp;image=/Fletechers/images/profile/'.$teacher_data['username'].'/_profile_img.jpg"></span>';
 
                 }
                 else 
                 {
-                  
+                  echo '<div id="teachersLink" style="border:none;">';
                   echo '<a href="teacher-member.php"><img src="images/teachers_icon_large_389x389.png"></a>';
                 }
-              ?>              
-              <div id="profilePicUpload">
+              ?>            
+             
+            </div>
+             <div id="profilePicUpload">
               <form  action="" method="post" enctype="multipart/form-data">
                 <input type="file" name="profile"><br>
                 <input type="submit" value="UPLOAD">
               </form>
-              </div>
             </div>
 
           </div> 
           <div id="rightBodyContent">
-            <div id="registrationForm" style="padding-top:20px;">   
+            <div id="registrationForm" style="padding-top:30px; width:500px;"> 
+              <form action="teacher-edit-profile.php" method="post">
               <ul>
-                <table width="400px;" border="0" cellspacing="0" cellpadding="0">
+                <table border="0" cellspacing="0" cellpadding="0">
                     <tr>
                       <th colspan="2">
                         <li style="width:75px;">Prefix<br>
@@ -258,7 +254,8 @@ if(empty($_POST) === false)
                     </tr>
                     <tr>
                       <th colspan="2">          
-                        <li style="padding-top:20px; width:30%; font-weight:bold;"><input type="submit" value="SAVE" action="teacher-edit-profile.php"></li>
+                        <li style="padding-top:20px; width:30%; font-weight:bold;">
+                          <input type="submit" value="SAVE" action="teacher-edit-profile.php"></li>
                       </th>               
                     </tr>             
                  </table>               

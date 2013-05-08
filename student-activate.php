@@ -54,8 +54,15 @@ else
         <?php 
         if($sucess_flag === true)
         { ?>
-	        <h2>You have sucessfully Activated your account</h2>
-			<h2><a href="student-login.php">Click Here you to login!!</a></h2> 
+	    <div class="grid_12 omega" id="content">
+	    	<div class="grid_12 omega">
+		    	<div id="mainLinks" style="width:960px; margin:auto;">
+		    		<h2 style="padding-top:20%;">YOUR ACCOUNT HAS BEEN SUCCESSFULLY ACTIVATED.</h2>
+		    		<h2 style="padding-top:3%;"><a href=student-login.php>CLICK HERE FOR PARENTS LOGIN PAGE</a></h2> 
+				</div>
+	    	</div> 
+		</div>
+
 		<?php
 		}?>     
         <!end of main links!>  
