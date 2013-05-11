@@ -61,7 +61,7 @@ if(empty($_POST) === false)
         <!start of mainlinks div !>
         <div id="mainLinks">                   
           <div id="teachersLink" style="border:none; border-radius:0px; height:auto;"><a href="teacher-login.php">
-            <h2 style="text-align:centre; padding-top:30px;">LOGIN</h2> 
+            <h2 style="text-align:centre; margin-top:10px;">LOGIN</h2> 
             <img src="images/teachers_icon_large_389x389.png"></a>
           </div>
           <div id="loginForm" style="float:right;">   

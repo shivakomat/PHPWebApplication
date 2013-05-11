@@ -191,7 +191,7 @@ if(empty($_POST)== false)
             </div>  
           </div> 
           <div id="rightBodyContent">
-          	<h2 style="text-align:center; padding-left:75px; padding-top:30px;">MAKE YOUR CHANGES</h2>
+          	<h2 class="subPageTitleToRight">MAKE YOUR CHANGES</h2>
             <div id="studentsLink" style="border:none; height:auto;"><a href="student-member.php"><img src="images/parents_icon_large_389x389.png"></a></div>
           </div>
         </div> <!end of main links div tag !>      

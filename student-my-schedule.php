@@ -62,7 +62,7 @@ $num_booking_rows = mysql_num_rows($bookings);
             </div>            
           </div> <!end of left body content !>
           <div id="rightBodyContent">
-          	<h2 style="text-align:center; padding-left:75px; padding-top:30px;">MY SCHEDULE</h2>
+          	<h2 class="subPageTitleToRight">MY SCHEDULE</h2>
             <div id="studentsLink" style="border:none; height:auto;" ><a href="student-member.php"><img src="images/parents_icon_large_389x389.png"></a>
             </div>
           </div>

@@ -10,6 +10,7 @@ html
         src: local("BebasNeue"), url("../fonts/BebasNeue.otf") format("truetype"); /* non-IE */
 }
 
+
 a{
 	text-decoration: none;
 	color:#85ECEB;
@@ -17,7 +18,7 @@ a{
 #header{
 	width:960px;
 	margin:auto;
-	height:19.78%;
+	height:150px;
 }
 #logoutButton{
 	float: right;
@@ -51,15 +52,13 @@ a{
 }
 #content
 {
-	padding-top:0;
-	padding-bottom:2.2%;
-	height:71.11%;	
+	padding-top:0;	
+	padding-bottom: 10px;
+	height:auto;	
 	background-image:url(../images/bg_101x101.fw.png);
 	background-repeat:repeat;
-	margin-bottom:0px;	
-	box-shadow:inset 0px 7px 20px rgba(0,0,0,.5); 
-	-moz-box-shadow:inset 0 0 10px #000000; 
-
+	margin-bottom:0px;
+	
 }
 #content h2
 {
@@ -72,7 +71,7 @@ a{
 	float: left;
 }
 #rightBodyContent{
-	width: 480px;
+	width: 400px;
 	height: auto;
 	float: right;
 }
@@ -98,25 +97,20 @@ a{
 	filter: alpha(opacity=0);
 	overflow: hidden;
 	text-align: center;
-
-
 }
 #teachersLink span{
 	display: block;
-
 }
 #teachersLink span img{
 	display: inline-block;
 	margin:auto;
 }
-
 .profileImg_thumnail{
 	border-radius: 200px;
 	-webkit-border-radius: 200px;
 	-moz-border-radius: 200px;
 	width: 35px;
 	height: 35px;
-
 }
 #studentsLink {
 	float: right;
@@ -140,8 +134,7 @@ a{
 }
 #membersBodyMenu{
 	float:right; 
-	margin:40% 10% 0 0;
-	
+	margin:40% 10% 0 0;	
 }
 #membersBodyMenu a{
 	color: #FFF;
@@ -221,14 +214,17 @@ input:focus,select:focus {
     border-color:#333;
     box-shadow:0 0 10px #333;
 }
-
+.subPageTitleToRight{
+	text-align:centre; 
+	margin-top:10px;
+}
 #loginForm
 {
 	color: #fff;
 }
 #loginForm form
 {
-	padding-top:50%;
+	padding-top:35%;
 	height:auto;
 	font-size:23px;
 	text-align:left;
@@ -378,7 +374,7 @@ input:focus,select:focus {
 	background-color: #fff;
 	width: 400px;
 	height: auto;
-	margin-top: 20%;
+	margin-top: 10%;
 	color: #333;
 	padding: 15px;
 	min-height: 325px;
@@ -391,6 +387,7 @@ input:focus,select:focus {
 	text-align: left;
 	padding-top:5px;
 	padding-bottom: 5px;
+	vertical-align: middle;
 
 }
 #studentMyScheduleDisplay table td div
@@ -439,7 +436,8 @@ input:focus,select:focus {
 	margin-left:auto;
 	margin-right:auto;
 	margin-bottom:0px;
-	height:10%;
+	height:80px;
+	
 }
 #supportLink
 {
@@ -468,6 +466,7 @@ input:focus,select:focus {
 	margin:auto;
 	width:960px;
 	text-align:center;
-	height:2.22%;
+	height:18px;
+	overflow: hidden;
 	
 }

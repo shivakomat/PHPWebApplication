@@ -28,6 +28,6 @@
     <div id="copyright"><h5>&copy; COPY RIGHT LIONSOFT. ALL RIGHTS RESERVERD.2013</h5></div>
   </div>        
 <! end of footer !>
-</div>
+</div><!end of Overall container!>
 </body>
 </html>

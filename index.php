@@ -8,7 +8,7 @@ teacherLogged_in_redirect();
 <!start of body content!>
     <div class="grid_12 omega" id="content">
         <div class="grid_12 omega">
-        <h2 style="padding-top:30px;">WHICH ONE ARE YOU?</h2>
+        <h2 style="margin-top:10px;">WHICH ONE ARE YOU?</h2>
         </div>
         <div id="mainLinks" style="width:960px; margin:auto;">
           <div id="teachersLink" style="border:none;"><a href="teacher-login.php"><img src="images/teachers_icon_large_389x389.png"></a></div>

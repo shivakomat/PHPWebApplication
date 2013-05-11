@@ -14,15 +14,13 @@ $teacherLastname = strtoupper($teacher_data['lastname']);
             <?php
             //loads teacher profile image
             if($teacher_data['profile'] == 1)
-            {
-                             
+            {                             
               echo '<div id="teachersLink">';
-              echo '<span><img class="profileImg" src="image.php?width=389&amp;height=389&amp;quality=100&amp;image=/Fletechers/images/profile/'.$teacher_data['username'].'/_profile_img.jpg"></span>';
+              echo '<span><img class="profileImg" src="image.php?height=389&amp;quality=100&amp;image=/images/profile/'.$teacher_data['username'].'/_profile_img.jpg"></span>';
                   
             }
             else 
-            {
-              
+            {              
               echo '<div id="teachersLink" style="border:none;">';
               echo '<a href="teacher-member.php"><img src="images/teachers_icon_large_389x389.png"></a>';
             }

@@ -10,7 +10,7 @@
             			include "includes/logout-button.php";
             		}
             	?>
-                <div id="logo"><img src="images/fletchers_logo_112x178.png"></div>
+                <div id="logo"><img  src="images/logo_114x150.png"></div>
                 <div id="title"><h1>FLETCHER`S MEADOW</h1></div>
 
                 <!For Members Area Only - Need to be rectified later!>

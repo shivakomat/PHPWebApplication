@@ -9,12 +9,12 @@
     $connect_error='Sorry We\'re experiemcing connection problems';
 
     //local server settings
-	//$connect = mysql_connect('localhost','root','password')or die($connect_error);	
-	//mysql_select_db('lionsoft_parentteacher');
+	$connect = mysql_connect('localhost','root','password')or die($connect_error);	
+	mysql_select_db('lionsoft_parentteacher');
 
     //online server settings 
-	$connect = mysql_connect('db463998569.db.1and1.com','dbo463998569','hyderabad') or die($connect_error);
-	mysql_select_db('db463998569');
+	//$connect = mysql_connect('db463998569.db.1and1.com','dbo463998569','hyderabad') or die($connect_error);
+	//mysql_select_db('db463998569');
 	
 ?>
  

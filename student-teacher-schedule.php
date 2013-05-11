@@ -72,7 +72,7 @@ $num_booking_rows = mysql_num_rows($bookings);
                       }
                       else if($flag === false)
                       {
-                        echo "<td><div class='timeslot'>booked<div></td>"; 
+                        echo "<td><div class='timeslot' style='background-color:#F24141;'>BOOKED<div></td>"; 
                         $flag = true;
                       }
                       
@@ -119,12 +119,12 @@ $num_booking_rows = mysql_num_rows($bookings);
 
           </div> 
           <div id="rightBodyContent">
-          	<h2 style="text-align:center; padding-left:75px; padding-top:30px; text-transform:uppercase;"><?php echo "$_GET[prefix] $currentTeacher"; ?></h2>
+          	<h2 class="subPageTitleToRight" style="text-transform:uppercase;"><?php echo "$_GET[prefix] $currentTeacher"; ?></h2>
             
               <?php 
               if($currentTeacherProfileValue==1){
                 echo '<div id="studentsLink">';
-                echo "<a href=\"student-member.php\"><img class=\"profileImg\" src=\"image.php?width=389&amp;height=389&amp;quality=100&amp;image=/Fletechers/images/profile/$currentTeacherUsername/_profile_img.jpg\"></a>";
+                echo "<a href=\"student-member.php\"><img class=\"profileImg\" src=\"image.php?height=389&amp;quality=100&amp;image=/images/profile/$currentTeacherUsername/_profile_img.jpg\"></a>";
 
               }
               else

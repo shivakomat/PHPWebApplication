@@ -72,7 +72,8 @@ if(empty($_POST) === false)
          <!start of main links!>
         <div id="mainLinks">
           <div id="studentsLink" style="border:none; height:auto;">
-           <h2 style="text-align:centre; padding-top:30px;">LOGIN</h2><a href="student-login.php"><img src="images/parents_icon_large_389x389.png"></a>
+           <h2 class="subPageTitleToRight">LOGIN</h2>
+           <a href="student-login.php"><img src="images/parents_icon_large_389x389.png"></a>
           </div>
           <div id="loginForm" style="float:left;">   
               <form action="student-login.php" method="POST">

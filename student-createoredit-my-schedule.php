@@ -16,7 +16,7 @@ $num_rows = mysql_num_rows($result);
         <! start of Main Link div tag !>
         <div id="mainLinks">
           <div id="leftBodyContent">  
-            <div style="width:100%; margin-top:30%; color:#fff;">
+            <div style="width:100%; margin-top:10%; color:#fff;">
             <div style="float:left; width:50%; text-align:left;"><h3>TEACHERS</h3></div>
             <div style="float:right; width:50%; text-align:left;"><h3>SUBJECT</h3></div>
             </div>        
@@ -40,7 +40,7 @@ $num_rows = mysql_num_rows($result);
                     echo "<tr>
                             <td><a href=\"student-teacher-schedule.php?prefix=$teacherPrefix&teachername=$teacherLastname&teacherusername=$teacherUsername&teacherProfileValue=$teacherProfileImg\">$teacherPrefix&nbsp;$teacherLastname</a></td>";                            
                             if($teacherProfileImg == 1){
-                               echo "<td><a href=\"student-teacher-schedule.php?prefix=$teacherPrefix&teachername=$teacherLastname&teacherusername=$teacherUsername&teacherProfileValue=$teacherProfileImg\"><img class=\"profileImg_thumnail\" src=\"images/profile/$teacherUsername/_profile_img.jpg\"/></a></td>";
+                               echo "<td><a href=\"student-teacher-schedule.php?prefix=$teacherPrefix&teachername=$teacherLastname&teacherusername=$teacherUsername&teacherProfileValue=$teacherProfileImg\"><img class=\"profileImg_thumnail\" src=\"/images/profile/$teacherUsername/_profile_img.jpg\"/></a></td>";
 
                             }
                             else
@@ -58,7 +58,7 @@ $num_rows = mysql_num_rows($result);
             </div>             
           </div> 
           <div id="rightBodyContent">
-          	<h2 style="text-align:center; padding-left:75px; padding-top:30px;">pick your teacher</h2>
+          	<h2 class="subPageTitleToRight">pick your teacher</h2>
             <div id="studentsLink" style="border:none; height:auto;"><a href="student-member.php"><img src="images/parents_icon_large_389x389.png"></a></div>
           </div>
         </div> <!end of main links div tag !>      
